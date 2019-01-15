@@ -18,19 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HELLO SWIFT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXc-BR-aEt">
-                                <rect key="frame" x="92" y="90" width="230" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO SWIFT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXc-BR-aEt">
+                                <rect key="frame" x="20" y="90" width="374" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                 <color key="textColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAR-nN-86I">
-                                <rect key="frame" x="90" y="416" width="235" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Friend Name :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLH-wC-Dti">
+                                <rect key="frame" x="89.5" y="192" width="235" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="235" id="V7b-pq-4yp"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAR-nN-86I">
+                                <rect key="frame" x="89.5" y="340" width="235" height="45"/>
                                 <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="235" id="FNE-w1-9HN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <state key="normal" title="CLICK ME!">
                                     <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -39,11 +49,40 @@
                                     <action selector="clickMeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qTb-SE-wNw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mog-da-DrU">
+                                <rect key="frame" x="89.5" y="268" width="235" height="45"/>
+                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="235" id="ewa-te-FW7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="235" id="lJ3-K4-lIx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <state key="normal" title="ADD ME!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addMeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S18-Mi-VC5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XAR-nN-86I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="18K-pv-u0w"/>
+                            <constraint firstItem="VLH-wC-Dti" firstAttribute="top" secondItem="kXc-BR-aEt" secondAttribute="bottom" constant="59" id="58a-ei-UaU"/>
+                            <constraint firstItem="mog-da-DrU" firstAttribute="top" secondItem="VLH-wC-Dti" secondAttribute="bottom" constant="46" id="9ky-Wb-d86"/>
+                            <constraint firstItem="kXc-BR-aEt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="IQf-Yq-cgU"/>
+                            <constraint firstItem="kXc-BR-aEt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="P6V-PS-Qcg"/>
+                            <constraint firstItem="mog-da-DrU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VLH-wC-Dti" secondAttribute="bottom" constant="27" id="QKe-q9-ZaJ"/>
+                            <constraint firstItem="mog-da-DrU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QPj-Jj-ZOh"/>
+                            <constraint firstItem="XAR-nN-86I" firstAttribute="top" secondItem="mog-da-DrU" secondAttribute="bottom" constant="27" id="QY4-4J-gkm"/>
+                            <constraint firstItem="VLH-wC-Dti" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WPO-Ma-nqe"/>
+                            <constraint firstItem="mog-da-DrU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k3a-mg-Vsq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kXc-BR-aEt" secondAttribute="trailing" constant="20" id="vbz-sW-Pv3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="friendTextField" destination="VLH-wC-Dti" id="Hit-qk-b5P"/>
                         <outlet property="titleLable" destination="kXc-BR-aEt" id="B37-1O-oha"/>
                     </connections>
                 </viewController>

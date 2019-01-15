@@ -12,17 +12,21 @@ class ViewController: UIViewController {
     
 //    Explicit
     var name:String = "Nuutt"
+    var friend:String = ""
     
+    @IBOutlet weak var friendTextField: UITextField!
     @IBOutlet weak var titleLable: UILabel!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     } //MAIN FUNCTION
     
     
+    @IBAction func addMeButton(_ sender: UIButton) {
+        friend = friendTextField.text!
+        titleLable.text = friend
+    }
     
     @IBAction func clickMeButton(_ sender: UIButton) {
         titleLable.text = name
