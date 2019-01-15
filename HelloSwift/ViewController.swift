@@ -9,12 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+//    Explicit
+    var name:String = "Nuutt"
+    
+    @IBOutlet weak var titleLable: UILabel!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    } //MAIN FUNCTION
+    
+    
+    
+    @IBAction func clickMeButton(_ sender: UIButton) {
+        titleLable.text = name
     }
+    
 
-
-}
+} //MAIN CLASS
 
